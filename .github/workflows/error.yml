@@ -2,7 +2,7 @@ name: Workflow error
 on: push
 jobs:
   run:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: date
       - run: echo "YAML syntax error"
