@@ -4,6 +4,7 @@ on:
     - cron: '*/15 * * * *'
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - run: date
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
