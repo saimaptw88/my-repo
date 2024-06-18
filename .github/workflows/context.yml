@@ -3,5 +3,10 @@ on: push
 jobs:
   print:
     runs-on: ubuntu-latest
+    env:
+      RANCH: main
     steps:
-      - run: echo "${{ github.event.pull_request.title }}"
+      - run: echo "${ BRANCH }"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
